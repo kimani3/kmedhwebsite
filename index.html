@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://thenairobihosp.org/_nuxt/img/TNH%20Logo.f93f190.svg" width="16px" height="16px" type="image/svg+xml">
+
+    <title>Hospital Website</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id='home'><a href="index.html">Home</a></li>
+                <li id='about'><a href="about.html">About Us</a></li>
+                <li id='services'><a href="services.html">Services</a></li>
+                <li id='contact'><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="index-bg">
+        <section>
+            <h1>Welcome to Kenneth Matiba Hospital</h1>
+        </section>
+    </main>
+    
+    <section id="home">
+        <div style="margin-left:5px">
+            <p>The Kenneth Matiba Eye and Dental Hospital, located in Kimorori/Wempa, Muranga South, Kenya, is a Ministry of Health primary care hospital fully operational as of 2021.<br><br>The hospital was named after veteran politician Kenneth Matiba and was dedicated to him in 2016.
+                It provides specialized eye and dental care services and has treated thousands of patients since its commissioning.
+                In April 2025, the hospital moved to a new facility in Kenol town as part of a state-of-the-art health facility construction project.
+                The relocation aims to enhance the hospital's capacity to serve more patients in need of specialized care.
+            </p>
+            
+            <h2 style="color:#05330f;">Virtual tour of The Kenneth Matiba Hospital</h2>
+            <div class="full-img">
+                <img class="displayed-img" src="Images/ear unit.jpg" alt="Ear treatment unit">
+                <div class="overlay"></div>
+                <button class="dark">Darken</button>
+            </div>
+            <div class="thumb-bar"></div>
+        </div>
+    </section>
+    
+    <footer>
+      <section id="contact">
+          <h2>Get in Touch With Us</h2>
+          <p> +254 703 082 000 / +254 730 666 000</p>
+          <p>info@thenairobihospital.com</p>
+          <p>The Nairobi Hospital, Argwings Kodhek Rd, Upper Hill area, Nairobi, Kenya</p>
+      </section>
+      <p>&copy; 2024 The Nairobi Hospital. All rights reserved.</p>
+  </footer>
+
+    <script>
+        // Image filenames (update with your actual hospital images)
+        const imageFiles = [
+            'ear unit.jpg',
+            'inpatient.jpg',
+            'eye_unit.jpg',
+            'theatre.jpeg',
+            'LabMachines.jpg'
+        ];
+        
+        // Alternative text for accessibility
+        const altText = {
+            'ear unit.jpg': 'Modern ear treatment unit',
+            'inpatient.jpg': 'Inpatient ward with comfortable beds',
+            'eye_unit.jpg': 'Modern eye treatment unit',
+            'theatre.jpeg': 'Hospital operating theater',
+            'LabMachines.jpg': 'Medical laboratory with advanced equipment'
+        };
+        
+            //  DOM elements
+            const thumBar = document.querySelector('.thumb-bar');
+            const displayedImg = document.querySelector('.displayed-img');
+            const btn = document.querySelector('button');
+            const overlay = document.querySelector('overlay');
+
+        
+            // Create individual  thumbnail images
+            imageFiles.forEach(filename => {
+                const thumb = document.createElement('img');
+                thumb.src = `Images/${filename}`;
+                thumb.alt = altText[filename] || 'Hospital facility';
+                thumb.classList.add('thumbnail');
+            // Add cloick event Listener
+            newImage.addEventListener('click', function(){
+              // update displayed image src and alt
+              displayingImg.src = this.src;
+              displayingImg.alt = this.alt;
+            });
+
+            thumbBar.appendChild(newImage);
+          });
+                
+                
+            // Darken/lighten toggle
+            darkBtn.addEventListener('click', function() {
+            if (displayedImg.style.filter === 'brightness(50%)') {
+                displayedImg.style.filter = 'brightness(100%)';
+                this.textContent = 'Darken';
+            } else {
+                displayedImg.style.filter = 'brightness(50%)';
+                this.textContent = 'Lighten';
+            }
+            
+            // Set initial image
+            if (imageFiles.length > 0) {
+                displayedImg.src = `Images/${imageFiles[0]}`;
+                displayedImg.alt = altText[imageFiles[0]] || 'Hospital facility';
+            };
+            
+    </script>
+</body>
+
+</html>

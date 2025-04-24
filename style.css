@@ -1,0 +1,339 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #d72626;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: xx-large;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px; /* Adjust as needed */
+}
+
+button {
+    background-color: #05330f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #064626;
+}
+.index-bg {
+    background-image: url('Images/front.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+    height: 100vh; /* Sets the height of the background to 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0a3116; /* Change text color for better visibility */
+}
+
+.index-bg section {
+    padding: 50px; /* Adjust padding for better content placement */
+    text-align: center; /* Center-align content */
+}
+
+.index-bg h1,
+.index-bg p {
+    color: #05330f; /* Set text color to contrast with background */
+}
+
+
+.esg-bg {
+    background-image: url('https://www.aar-healthcare.com/ke/wp-content/themes/aar/images/csr.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+    height: 100vh; /* Sets the height of the background to 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #05330f; /* Change text color for better visibility */
+}
+
+.esg-bg section {
+    padding: 50px; /* Adjust padding for better content placement */
+    text-align: center; /* Center-align content */
+}
+
+.esg-bg h1,
+.esg-bg p {
+    color: #ec1212; /* Set text color to contrast with background */
+}
+footer {
+    background-color: #364b3f; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding to give some space around the content */
+    text-align: center; /* Center-align the content */
+}
+
+footer p {
+    margin: 5px 0; /* Add some margin between each paragraph */
+}
+
+footer ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+footer ul li {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 10px; /* Add some space between list items */
+}
+
+footer ul li a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove default underline from links */
+}
+
+footer ul li a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+}
+/* Body styles */
+body {
+    font-family: Arial, sans-serif; /* Use Arial font for better readability */
+    line-height: 1.6; /* Set line height for better spacing between lines of text */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Header styles */
+header {
+    background-color: #05330f; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 20px; /* Add padding to the header */
+}
+
+header nav ul {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+header nav ul li {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 20px; /* Add some space between list items */
+}
+
+header nav ul li a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove default underline from links */
+}
+
+header nav ul li a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+}
+/* Thumbnail styling */
+.thumb-bar {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.thumb-bar img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #05330f;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.thumb-bar img:hover {
+    transform: scale(1.05);
+}
+
+/* Full image styling */
+.full-img {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.displayed-img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Darken overlay effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s;
+}
+
+.darken-effect .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Button styling */
+.dark {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 20px;
+    background-color: #05330f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.dark:hover {
+    background-color: #076a1f;
+}
+
+/* Main content styles */
+
+main {
+    padding: 20px; /* Add padding to the main content */
+}
+
+section {
+    margin-bottom: 20px; /* Add some space between sections */
+}
+
+h1 {
+    color: #05330f; /* Dark text color */
+}
+
+h2 {
+    color: #666; /* Slightly darker text color */
+}
+
+p {
+    color: #666; /* Darker text color */
+}
+
+ul {
+    color: #666; /* Darker text color for lists */
+}
+
+/* Footer styles */
+footer {
+    background-color: #05330f; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: auto; /* Add padding to the footer */
+    text-align: center; /* Center-align the content */
+}
+
+footer p {
+    margin: 5px 0; /* Add some margin between each paragraph */
+}
+
+footer ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+footer ul li {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 10px; /* Add some space between list items */
+}
+
+footer ul li a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove default underline from links */
+}
+
+footer ul li a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #666; /* Slightly darker text color */
+
+}
+th {
+    background-color: #f2f2f2;
+}
+#welcome-message {
+    text-align: center;
+    font-weight: bold;
+    background-color: #05330f;
+    color:#666;
+}
