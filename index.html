@@ -4,10 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://thenairobihosp.org/_nuxt/img/TNH%20Logo.f93f190.svg" width="16px" height="16px" type="image/svg+xml">
-
     <title>Hospital Website</title>
     <link rel="stylesheet" href="style.css">
-   
+    <style>
+        /* Additional styles for the gallery */
+        .thumbnail {
+            width: 100px;
+            height: 75px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid #05330f;
+            margin: 5px;
+            transition: transform 0.2s;
+        }
+        .thumbnail:hover {
+            transform: scale(1.05);
+        }
+        .displayed-img {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+        .full-img {
+            position: relative;
+            margin: 20px auto;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            transition: background-color 0.3s;
+        }
+        .dark {
+            padding: 10px 20px;
+            background: #05330f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .thumb-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -37,26 +88,25 @@
             
             <h2 style="color:#05330f;">Virtual tour of The Kenneth Matiba Hospital</h2>
             <div class="full-img">
-                <img class="displayed-img" src="Images/ear unit.jpg" alt="Ear treatment unit">
+                <img class="displayed-img" src="" alt="">
                 <div class="overlay"></div>
-                <button class="dark">Darken</button>
+                
             </div>
             <div class="thumb-bar"></div>
         </div>
     </section>
     
     <footer>
-      <section id="contact">
-          <h2>Get in Touch With Us</h2>
-          <p> +254 703 082 000 / +254 730 666 000</p>
-          <p>info@thenairobihospital.com</p>
-          <p>The Nairobi Hospital, Argwings Kodhek Rd, Upper Hill area, Nairobi, Kenya</p>
-      </section>
-      <p>&copy; 2024 The Nairobi Hospital. All rights reserved.</p>
-  </footer>
+        <section id="contact">
+            <h2>Get in Touch With Us</h2>
+            <p> +254 703 082 000 / +254 730 666 000</p>
+            <p>Kenneth Matiba Hospital, Makenji, Mutang'a, Kenya</p>
+        </section>
+        <p>&copy; 2025 Kenneth Matiba Hospital. All rights reserved.</p>
+    </footer>
 
     <script>
-        // Image filenames (update with your actual hospital images)
+        // Image filenames
         const imageFiles = [
             'ear unit.jpg',
             'inpatient.jpg',
@@ -65,7 +115,7 @@
             'LabMachines.jpg'
         ];
         
-        // Alternative text for accessibility
+        // Alternative text for each image
         const altText = {
             'ear unit.jpg': 'Modern ear treatment unit',
             'inpatient.jpg': 'Inpatient ward with comfortable beds',
@@ -73,48 +123,52 @@
             'theatre.jpeg': 'Hospital operating theater',
             'LabMachines.jpg': 'Medical laboratory with advanced equipment'
         };
-        
-            //  DOM elements
-            const thumBar = document.querySelector('.thumb-bar');
-            const displayedImg = document.querySelector('.displayed-img');
-            const btn = document.querySelector('button');
-            const overlay = document.querySelector('overlay');
 
-        
-            // Create individual  thumbnail images
-            imageFiles.forEach(filename => {
-                const thumb = document.createElement('img');
-                thumb.src = `Images/${filename}`;
-                thumb.alt = altText[filename] || 'Hospital facility';
-                thumb.classList.add('thumbnail');
-            // Add cloick event Listener
-            newImage.addEventListener('click', function(){
-              // update displayed image src and alt
-              displayingImg.src = this.src;
-              displayingImg.alt = this.alt;
+        // DOM elements
+        const thumbBar = document.querySelector('.thumb-bar');
+        const displayedImg = document.querySelector('.displayed-img');
+        const btn = document.querySelector('.dark');
+        const overlay = document.querySelector('.overlay');
+
+        // Create thumbnails and add click event listeners
+        imageFiles.forEach(filename => {
+            const thumb = document.createElement('img');
+            thumb.src = `Images/${filename}`;
+            thumb.alt = altText[filename];
+            thumb.classList.add('thumbnail');
+            
+            // Add click event listener to each thumbnail
+            thumb.addEventListener('click', function() {
+                // Update displayed image with clicked thumbnail's src and alt
+                displayedImg.src = this.src;
+                displayedImg.alt = this.alt;
             });
+            
+            thumbBar.appendChild(thumb);
+        });
 
-            thumbBar.appendChild(newImage);
-          });
-                
-                
-            // Darken/lighten toggle
-            darkBtn.addEventListener('click', function() {
-            if (displayedImg.style.filter === 'brightness(50%)') {
-                displayedImg.style.filter = 'brightness(100%)';
-                this.textContent = 'Darken';
-            } else {
-                displayedImg.style.filter = 'brightness(50%)';
+        // Set first image as default if array isn't empty
+        if (imageFiles.length > 0) {
+            displayedImg.src = `Images/${imageFiles[0]}`;
+            displayedImg.alt = altText[imageFiles[0]] || 'Hospital facility';
+        }
+
+        // Darken/Lighten button functionality
+        btn.addEventListener('click', function() {
+            const currentClass = this.getAttribute('class');
+            
+            if (currentClass === 'dark') {
+                // Switch to light mode
+                this.setAttribute('class', 'light');
                 this.textContent = 'Lighten';
+                overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            } else {
+                // Switch to dark mode
+                this.setAttribute('class', 'dark');
+                this.textContent = 'Darken';
+                overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
             }
-            
-            // Set initial image
-            if (imageFiles.length > 0) {
-                displayedImg.src = `Images/${imageFiles[0]}`;
-                displayedImg.alt = altText[imageFiles[0]] || 'Hospital facility';
-            };
-            
+        });
     </script>
 </body>
-
 </html>
