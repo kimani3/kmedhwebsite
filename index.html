@@ -4,53 +4,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://thenairobihosp.org/_nuxt/img/TNH%20Logo.f93f190.svg" width="16px" height="16px" type="image/svg+xml">
-    <title>Hospital Website</title>
+    <title>Kenneth Matiba Hospital</title>
     <link rel="stylesheet" href="style.css">
-    
+   
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li id='home'><a href="index.html">Home</a></li>
-                <li id='about'><a href="about.html">About Us</a></li>
-                <li id='services'><a href="services.html">Services</a></li>
-                <li id='contact'><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#virtual-tour">Virtual Tour</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     
-    <main class="index-bg">
-        <section>
+    <main id="home" class="index-bg">
+        <section class="section-container">
             <h1>Welcome to Kenneth Matiba Hospital</h1>
+            <p>Quality healthcare services for our community</p>
         </section>
     </main>
-    
-    <section id="home">
-        <div style="margin-left:5px">
-            <p>The Kenneth Matiba Eye and Dental Hospital, located in Kimorori/Wempa, Muranga South, Kenya, is a Ministry of Health primary care hospital fully operational as of 2021.<br><br>The hospital was named after veteran politician Kenneth Matiba and was dedicated to him in 2016.
-                It provides specialized eye and dental care services and has treated thousands of patients since its commissioning.
-                In April 2025, the hospital moved to a new facility in Kenol town as part of a state-of-the-art health facility construction project.
-                The relocation aims to enhance the hospital's capacity to serve more patients in need of specialized care.
-            </p>
-            
-            <h2 style="color:#05330f;">Virtual tour of The Kenneth Matiba Hospital</h2>
-            <div class="full-img">
-                <img class="displayed-img" src="" alt="">
-                <div class="overlay"></div>
-                
+    <!-- about section  -->
+    <section id="about" class="section-container">
+        <h1>About Us</h1>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="THENBHSPTAL.jpg" alt="Kenneth Matiba Hospital">
             </div>
-            <div class="thumb-bar"></div>
+            <div class="about-text">
+                <p>Kenneth Matiba Hospital has been serving the community with excellence in healthcare for many years. Our team of dedicated professionals is committed to providing compassionate, high-quality medical services.</p>
+                <p>Our mission is to promote health and wellness through comprehensive, patient-centered care in a modern facility designed for comfort and healing.</p>
+                <p>The hospital features specialized units including an urgent care center for critical conditions and a separate outpatient unit for walk-in patients. Our facilities include modern treatment rooms, comfortable patient wards, and state-of-the-art medical equipment.</p>
+                <p>Every aspect of our hospital is designed with patient dignity and privacy in mind, from our private rooms to our specialized care units. We combine medical expertise with compassionate care to deliver exceptional patient experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Section -->
+    <section id="virtual-tour" class="section-container">
+        <h2>Virtual Tour of Our Facilities</h2>
+        <p>Explore our modern healthcare facilities through this interactive gallery:</p>
+        
+        <div class="full-img">
+            <img class="displayed-img" src="" alt="Hospital facility">
+            <div class="overlay"></div>
+            <button class="dark">Darken</button>
+        </div>
+        <div class="thumb-bar"></div>
+    </section>
+    <!-- Services Section -->
+        <section id="services" class="section-container">
+            <h1>Our Services</h1>
+            <p>Kenneth Matiba Hospital offers a comprehensive range of healthcare services designed to meet the diverse needs of our community. From preventive care to advanced treatments, our dedicated team provides compassionate, high-quality medical care.</p>
+            
+            <div class="service-category">
+                <h2>Theatre Services</h2>
+                <div class="service-content">
+                    <div class="service-image">
+                        <img src="https://media.tarkett-image.com/medium/RF_Tarkett_Middle_East_Africa_AAR_Hospital_Kenya_11.jpeg" alt="Theatre Services">
+                    </div>
+                    <div class="service-text">
+                        <p>Our ophthalmic theatre features state-of-the-art facilities and specialized eye surgeons dedicated to providing exceptional ophthalmic care. 
+                        Equipped with advanced technology for eye procedures and adhering to strict safety standards, our theatre supports everything from routine cataract surgeries to complex retinal procedures. 
+                        Our experienced ophthalmic surgical team delivers personalized vision care with precision and compassion.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="service-category">
+                <h2>Diagnostic Services</h2>
+                <div class="service-content">
+                    <div class="service-image">
+                        <img src="https://media.springernature.com/lw450/springer-cms/rest/v1/content/15982464/data/v1" alt="Diagnostic Services">
+                    </div>
+                    <div class="service-text">
+                        <p>"Our diagnostic services support our specialized care in dentistry and casualty services. Our on-site laboratory provides essential testing for blood work and urinalysis, ensuring prompt and accurate results for your treatment. While we focus exclusively on dental, laboratory, and emergency care, our qualified technicians deliver reliable diagnostics to meet your needs..</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="stars">
+                ★ ★ ★ Experience excellence in healthcare services at Kenneth Matiba Hospital ★ ★ ★
+            </div>
+    
+            <h2> Other Services We Offer</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Outpatient Services</td>
+                        <td>Medical services provided without the need for an overnight stay</td>
+                    </tr>
+                    <tr>
+                        <td>Inpatient Services</td>
+                        <td>Comprehensive care for patients requiring hospitalization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Specialized Clinics</td>
+                        <td>Specialty care in ophthamology, dentistry</td>
+                    </tr>
+                    <tr>
+                        <td>Laboratory Services </td>
+                        <td>Basic blood and urine tests to prepare for eye/dental treatments and handle emergencies. Checks health markers before procedures.</td>
+                    </tr>
+                    <tr>
+                        <td>Pharmacy Services</td>
+                        <td>Complete prescription and over-the-counter medications</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    <!--contact section  -->
+    <section id="contacts" class="section-container">
+        <h1>Contact Us</h1>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>To book an appointment, send an email to:</p>
+                <p><a href="mailto:kmedh2024@gmail.com" class="contact-email">kmedh2024@gmail.com</a></p>
+                
+                <h3>Phone Numbers</h3>
+                <p>+254 703 082 000</p>
+                <p>+254 730 666 000</p>
+                
+                <h3>Location</h3>
+                <p>Kenneth Matiba Hospital, Makenji, Murang'a, Kenya</p>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.254234080374!2d37.1009149952413!3d-0.9634716691738846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1828b300294cc4bb%3A0x9e39a0a0c82e4dce!2sKenneth%20Matiba%20Hospital!5e0!3m2!1sen!2ske!4v1745581243071!5m2!1sen!2ske"
+             width="100%" 
+             height="450"
+             style="border:0;" 
+             allowfullscreen="" 
+             loading="lazy" 
+             referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </section>
     
-    <footer>
-        <section id="contact">
+    <!-- footer section -->
+    <footer id="contact">
+        <div class="section-container">
             <h2>Get in Touch With Us</h2>
-            <p> +254 703 082 000 / +254 730 666 000</p>
+            <p>+254 703 082 000 / +254 730 666 000</p>
             <p>Kenneth Matiba Hospital, Makenji, Mutang'a, Kenya</p>
-        </section>
-        <p>&copy; 2025 Kenneth Matiba Hospital. All rights reserved.</p>
+            <p>&copy; 2025 Kenneth Matiba Hospital. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
@@ -66,10 +197,10 @@
         // Alternative text for each image
         const altText = {
             'ear unit.jpg': 'Modern ear treatment unit',
-            'inpatient.jpg': 'Inpatient ward with comfortable beds',
-            'eye_unit.jpg': 'Modern eye treatment unit',
-            'theatre.jpeg': 'Hospital operating theater',
-            'LabMachines.jpg': 'Medical laboratory with advanced equipment'
+            'inpatient.jpg': 'Comfortable inpatient ward',
+            'eye_unit.jpg': 'Eye care department',
+            'theatre.jpeg': 'Operating theater',
+            'LabMachines.jpg': 'Medical laboratory'
         };
 
         // DOM elements
@@ -85,9 +216,7 @@
             thumb.alt = altText[filename];
             thumb.classList.add('thumbnail');
             
-            // Add click event listener to each thumbnail
             thumb.addEventListener('click', function() {
-                // Update displayed image with clicked thumbnail's src and alt
                 displayedImg.src = this.src;
                 displayedImg.alt = this.alt;
             });
@@ -95,10 +224,10 @@
             thumbBar.appendChild(thumb);
         });
 
-        // Set first image as default if array isn't empty
+        // Set first image as default
         if (imageFiles.length > 0) {
             displayedImg.src = `Images/${imageFiles[0]}`;
-            displayedImg.alt = altText[imageFiles[0]] || 'Hospital facility';
+            displayedImg.alt = altText[imageFiles[0]];
         }
 
         // Darken/Lighten button functionality
@@ -106,12 +235,10 @@
             const currentClass = this.getAttribute('class');
             
             if (currentClass === 'dark') {
-                // Switch to light mode
                 this.setAttribute('class', 'light');
                 this.textContent = 'Lighten';
                 overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
             } else {
-                // Switch to dark mode
                 this.setAttribute('class', 'dark');
                 this.textContent = 'Darken';
                 overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
